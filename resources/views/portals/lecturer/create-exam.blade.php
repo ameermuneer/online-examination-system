@@ -75,7 +75,7 @@
                             <label for="questionsnum" class="col-md-4 col-form-label text-md-right">{{ __('Questions Number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="questionsnum" name="questionsnum" type="number" class="form-control @error('questionsnum') is-invalid @enderror" value="{{ old('questionsnum') }}" required autocomplete="questionsnum" autofocus>
+                                <input id="questionsnum" name="questionsnum" type="number"  min="0" class="form-control @error('questionsnum') is-invalid @enderror" value="{{ old('questionsnum') }}" required autocomplete="questionsnum" autofocus>
 
                                 @error('questionsnum')
                                     <span class="invalid-feedback" role="alert">
@@ -88,7 +88,7 @@
                             <label for="duration" class="col-md-4 col-form-label text-md-right">{{ __('Duration in minuts') }}</label>
 
                             <div class="col-md-6">
-                                <input id="duration" name="duration" type="number" class="form-control @error('duration') is-invalid @enderror" value="{{ old('duration') }}" required autocomplete="duration" autofocus>
+                                <input id="duration" name="duration" type="number" min="0" class="form-control @error('duration') is-invalid @enderror" value="{{ old('duration') }}" required autocomplete="duration" autofocus>
 
                                 @error('duration')
                                     <span class="invalid-feedback" role="alert">
