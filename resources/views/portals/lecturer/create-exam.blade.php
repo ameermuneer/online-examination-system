@@ -103,7 +103,7 @@
                             <label for="datetime" class="col-md-4 col-form-label text-md-right">{{ __('Date and Time') }}</label>
 
                             <div class="col-md-6">
-                                <input id="datetime" name="datetime" type="datetime-local" class="form-control @error('datetime') is-invalid @enderror" value="{{ old('datetime') }}" required autocomplete="datetime" autofocus>
+                                <input id="datetime" name="datetime" type="datetime-local" class="form-control @error('datetime') is-invalid @enderror" value=<?php echo date('Y-m-d\TH:i:s', time()); ?> min=<?php echo date('Y-m-d\TH:i:s', time()); ?> required autocomplete="datetime" autofocus>
 
                                 @error('datetime')
                                     <span class="invalid-feedback" role="alert">
